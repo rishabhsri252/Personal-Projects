@@ -1,0 +1,86 @@
+/* Welcome Box*/
+.slide {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img1,
+.welcome h2,
+p {
+  animation: fadein 1s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.internal {
+  background-color: rgba(240, 255, 255, 0.5);
+  border: 2px solid darkslategray;
+  border-radius: 5px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+.section {
+  padding: 15px;
+  margin: 10px;
+}
+.section a {
+  color: black;
+}
+.section a:hover {
+  color: white;
+}
+.head {
+  display: flex;
+  align-items: center;
+}
+li {
+  list-style-type: disclosure-closed;
+}
+.left {
+  text-align: justify;
+  width: 40vw;
+}
+.center img {
+  width: 2vw;
+}
+.login,
+.form {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+.login fieldset {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.right ul {
+  height: 40vw;
+  overflow: auto;
+}
+.form input {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+}
+.left img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}

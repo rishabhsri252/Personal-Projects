@@ -1,0 +1,35 @@
+.card {
+  background-color: rgba(240, 255, 255, 0.5);
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid darkslategrey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+/*Transportation Table*/
+table {
+  background-color: rgba(240, 255, 255, 0.5);
+  border: 1px solid darkslategrey;
+  border-collapse: collapse;
+}
+caption {
+  font-style: italic;
+  font-size: 18px;
+}
+td,
+th {
+  padding: 8px;
+  border: 1px solid black;
+}
+th {
+  background-color: darkslategrey;
+  color: white;
+}

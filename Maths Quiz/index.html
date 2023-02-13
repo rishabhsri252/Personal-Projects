@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maths Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="welcome-screen">
+      <h1>WELCOME TO MATHS QUIZ!!</h1>
+      <h2>Test your calculation here -</h2>
+      <button type="button" id="how-Btn" onclick="displayHowToPlay()">
+        How to play?
+      </button>
+      <button
+        type="button"
+        id="start-Btn"
+        class="start"
+        onclick="displayQuestion()"
+      >
+        Start
+      </button>
+    </div>
+    <div class="how-to-play">
+      <ul>
+        <h2>How to Play</h2>
+        <li>There are 5 levels each consisting of 5 questions.</li>
+        <li>
+          With each increasing level the number of digits of operand increases.
+        </li>
+        <li>
+          You get +1 for each correct answer and -1 for each wrong answer.
+        </li>
+        <li>There is no time limit but try to solve as soon as possible.</li>
+        <h2>Types of operation</h2>
+        <li>+ means addition</li>
+        <li>- means substraction</li>
+        <li>* means multiplication</li>
+        <li>/ means division (only quotient)</li>
+        <li>% means division (only remainder)</li>
+        <li>** means to the power of</li>
+        <li>Division by zero will result in Infinity</li>
+      </ul>
+      <button type="button" class="start" onclick="displayQuestion()">
+        Start
+      </button>
+    </div>
+    <div class="container">
+      <div class="head">
+        <h1>Maths Quiz</h1>
+        <h2>Level : <span id="levelinfo">1</span></h2>
+        <hr />
+        <h2>Score : <span id="scoreinfo">0</span></h2>
+        <h2>Skips Left : <span id="skipinfo">10</span></h2>
+        <hr />
+      </div>
+      <div class="question">
+        <h1 id="question"></h1>
+      </div>
+      <div class="user-control">
+        <input
+          type="text"
+          name="display"
+          id="display_input"
+          placeholder="Enter answer without decimals"
+          autofocus
+          onkeypress="enterkeypressed(event)"
+        />
+        <button type="submit" id="submit-Btn" onclick="submit()">Submit</button>
+        <button type="button" id="skip-Btn" onclick="skip()">Skip</button>
+      </div>
+    </div>
+
+    <div class="quiz-over">
+      <h1>Congratulations!!</h1>
+      <h2>You have completed the game.</h2>
+      <h2>Your Score is : <span id="result">0</span></h2>
+      <button type="button" class="start" onclick="location.reload()">
+        Restart
+      </button>
+      <button type="button" onclick="window.print()">Print Result</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

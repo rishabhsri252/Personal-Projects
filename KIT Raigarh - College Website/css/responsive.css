@@ -1,0 +1,58 @@
+/*Changes when screen size is less than 1100px*/
+@media only screen and (max-width: 1000px) {
+  * {
+    font-size: small;
+  }
+  .header {
+    display: flex;
+    padding: 10px;
+    line-height: 20px;
+  }
+  .header img {
+    width: 20vw;
+  }
+  .burger-menu {
+    display: flex;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: static;
+  }
+  input[type="search"] {
+    margin: auto;
+  }
+  a {
+    padding: 5px;
+  }
+  .foot1,
+  .about,
+  .foot1,
+  .internal {
+    flex-direction: column-reverse;
+  }
+  .content,
+  .welcome {
+    display: flex;
+    flex-direction: column;
+  }
+  .card,
+  .about,
+  .slide img {
+    flex-wrap: wrap;
+  }
+  .welcome,
+  .card {
+    justify-content: center;
+  }
+  .welcome img {
+    width: 80vw;
+  }
+  fieldset,
+  .login {
+    flex-direction: column;
+  }
+  .left {
+    width: -webkit-fill-available;
+  }
+}

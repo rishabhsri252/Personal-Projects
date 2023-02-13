@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Resume Builder</h1>
+    </div>
+    <div class="welcome">
+      <div class="top">
+        <div class="text">
+          <h2>Simple, Easy to Build Resume</h2>
+          <p>
+            If you have came here on this site to build your resume, I assume
+            either you are a fresher who have no idea how to make a resume or
+            you are too lazy or a combination of both.
+          </p>
+          <p>Don't worry, I have made this task simple for you.</p>
+          <p>
+            Here you will be provided with a predesigned template and all you
+            have to do is to input your details and save the pdf of resume.
+          </p>
+          <p id="pros">Pros :</p>
+          <ul>
+            <li>Free of cost</li>
+            <li>Simple Interface</li>
+            <li>Time Saving</li>
+            <li>Clean Design</li>
+          </ul>
+          <p id="cons">Cons :</p>
+          <ul>
+            <li>Uniqueness</li>
+          </ul>
+          <p>
+            Currently, I could only provide you with 1 template to work on.
+            Hopefully I will add more templates in future.
+          </p>
+          <button type="button" id="get-started">Get Started</button>
+          <button type="button" id="support">Support</button>
+        </div>
+        <div class="screenshot">
+          <h2>Preview of Resume</h2>
+          <hr />
+          <img src="./img/preview.JPG" alt="Screenshot of Preview" />
+        </div>
+      </div>
+      <div class="bottom">
+        <h2>Website Interface</h2>
+        <hr />
+        <img src="./img/interface.png" alt="Screenshot of website" />
+      </div>
+    </div>
+    <div class="container">
+      <header>
+        <div class="img">
+          <img id="photo" src="" alt="Add your photo here" />
+          <input
+            type="file"
+            name="photo"
+            id="user-photo"
+            onchange="addPhoto(event)"
+          />
+        </div>
+        <div class="title">
+          <input type="text" name="title" id="title" placeholder="Title" />
+          <input
+            type="text"
+            name="title"
+            id="status"
+            placeholder="Current Employment Status"
+          />
+        </div>
+      </header>
+      <main>
+        <div class="left">
+          <div class="personal details">
+            <h2>PERSONAL INFO</h2>
+            <hr />
+            <form action="" autocomplete="off">
+              <div>Name:<input type="text" name="name" id="user-name" /></div>
+              <div>
+                Father's Name :<input
+                  type="text"
+                  name="name"
+                  id="father-name"
+                />
+              </div>
+              <div>
+                Date of Birth :<input
+                  type="date"
+                  name="date"
+                  id="date-of-birth"
+                  min="1990-01-01"
+                  max="2025-12-31"
+                />
+              </div>
+              <div>
+                Nationality:<input
+                  type="text"
+                  name="nationality"
+                  id="nationality"
+                />
+              </div>
+              <div>
+                Religion:<input type="text" name="religion" id="religion" />
+              </div>
+              <div>Gender:<input type="text" name="gender" id="gender" /></div>
+              <div>
+                Maritial-Status :<input
+                  type="text"
+                  name="maritial-status"
+                  id="maritial-status"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="contact details">
+            <h2>CONTACT</h2>
+            <hr />
+            <form action="" autocomplete="off">
+              <div>
+                Phone:<input type="number" name="phone" id="phone-number" />
+              </div>
+              <div>Email:<input type="email" name="email" id="email" /></div>
+              <div>
+                Address:<input
+                  placeholder="House No./ Locality"
+                  type="text"
+                  name="address"
+                  id="address-1"
+                />
+              </div>
+              <div>
+                <span></span
+                ><input
+                  placeholder="City/State"
+                  type="text"
+                  name="address"
+                  id="address-2"
+                />
+              </div>
+              <div>
+                <span></span
+                ><input
+                  placeholder="Pin-Code"
+                  type="text"
+                  name="address"
+                  id="address-3"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="right">
+          <div class="education details">
+            <h2>EDUCATION</h2>
+            <hr />
+            <table id="education-table">
+              <tr>
+                <td>Name of Exam</td>
+                <td>Year</td>
+                <td>Board/University</td>
+                <td>Percentage/Grade</td>
+              </tr>
+              <tr id="row">
+                <td><input type="text" name="education" id="exam" /></td>
+                <td><input type="text" name="education" id="year" /></td>
+                <td><input type="text" name="education" id="board" /></td>
+                <td><input type="text" name="education" id="percent" /></td>
+              </tr>
+            </table>
+            <button type="button" id="add-table-row">Add</button>
+            <button type="button" id="delete-table-row">Delete</button>
+          </div>
+          <br />
+          <div class="experience details">
+            <h2>
+              EXPERIENCE<button type="button" id="exp-btn">Remove</button>
+            </h2>
+
+            <hr />
+            <div id="experience-list">
+              <dl id="list">
+                <dt>
+                  <input
+                    placeholder="Name of Organisation : "
+                    type="text"
+                    name="experience"
+                    id="experience-heading"
+                  />
+                </dt>
+                <dd>
+                  <input
+                    placeholder="Role : "
+                    type="text"
+                    name="experience"
+                    id="experience-detail"
+                  />
+                </dd>
+              </dl>
+            </div>
+            <button type="button" id="add-list">Add</button>
+            <button type="button" id="delete-list">Delete</button>
+          </div>
+          <div class="skills details">
+            <h2>KEY SKILLS</h2>
+            <hr />
+            <ul>
+              <li id="skill-list">
+                <input type="text" name="skill" id="skill" />
+              </li>
+            </ul>
+            <button type="button" id="add-list-item">Add</button>
+            <button type="button" id="delete-list-item">Delete</button>
+          </div>
+          <div class="preview">
+            <button type="submit" onclick="preview()">Preview</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <span>2022 &copy All rights reserved</span>
+      <p>
+        For any query please contact
+        <a href="mailto:rishabhsri252@gmail.com">here</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
